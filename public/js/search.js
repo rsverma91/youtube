@@ -30,7 +30,7 @@ var fetchVideo = function(response) {
     var resultItems = response.items;
     nextPageToken = response.nextPageToken;
     $.each(resultItems, function(index, item) {
-        url = 'http://www.youtube.com/watch?v=' + item.id.videoId;
+        url = 'https://www.youtube.com/watch?v=' + item.id.videoId;
         vidTitle = '<div class="title">' + item.snippet.title + '</div>';
         vidPublishedAt = '<div class="publishedAt">Published on ' + (new Date(item.snippet.publishedAt)).toRBString() + '</div>';
         vidDescription = '<div class="description">' + item.snippet.description + '</div>';
