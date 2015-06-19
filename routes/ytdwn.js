@@ -20,7 +20,7 @@ router.get('/:url', function(req, res) {
                         var dwnurl = info.formats[i].url;
                         var dwnext = info.formats[i].ext;
                         var dwnquality = info.formats[i].height;
-                        dwnurl = dwnurl + '&title=' + info.title;
+                        dwnurl = dwnurl + '&title=' + info.title.replace(/"/g, '');
                         if (dwnext == 'm4a') {
                             dwnurl = dwnurl + '&ext=mp3';
                             dwnext = 'mp3';
