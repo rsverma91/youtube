@@ -12,7 +12,7 @@ router.get('/:url', function(req, res) {
             if (err) {
                 data = {
                     status: 404,
-                    msg: 'Sorry video not available'
+                    msg: 'Sorry download formats not available'
                 }
             } else {
                 for (var i = 0; i < info.formats.length; i++) {
