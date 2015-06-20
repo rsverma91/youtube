@@ -68,7 +68,7 @@ var bindEvents = function() {
                     $('.download-box').append('<div><a href="' + data.data[i].url + '" download>' + data.data[i].ext + '-' + data.data[i].quality + '</a>');
                 }
             } else {
-                $('.download-box').html(data.msg);
+                $('.download-box').html('<div>' + data.msg + '</div>');
             }
             $('.loader').hide();
             $('#search-container').show();
