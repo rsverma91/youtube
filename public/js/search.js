@@ -57,14 +57,18 @@ var bindEvents = function() {
         url = url.replace("watch?v=", "embed/");
         $('#vid-player').attr('src', url);
         $.get('/dwn/' + vidid['v'], function(data) {
-            $('.vid-container').slideDown('fast');
-            $('body, html').animate({
-                scrollTop: 120
-            }, '1000', 'swing');
-            $('.download-box').html('');
-            $('.download-box').append('<span>Select and Download</span>');
-            for (var i = 0; i < data.data.length; i++) {
-                $('.download-box').append('<div><a href="' + data.data[i].url + '" download>' + data.data[i].ext + '-' + data.data[i].quality + '</a>');
+            if (data.status === 200) {
+                $('.vid-container').slideDown('fast');
+                $('body, html').animate({
+                    scrollTop: 120
+                }, '1000', 'swing');
+                $('.download-box').html('');
+                $('.download-box').append('<span>Select and Download</span>');
+                for (var i = 0; i < data.data.length; i++) {
+                    $('.download-box').append('<div><a href="' + data.data[i].url + '" download>' + data.data[i].ext + '-' + data.data[i].quality + '</a>');
+                }
+            } else {
+                $('.download-box').html(data.status);
             }
             $('.loader').hide();
             $('#search-container').show();
