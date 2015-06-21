@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head id="ctl00_Head1">
-        <title>Search and Download Videos</title>
+    <head>
         <% include headtag %>
     </head>
-    <body id="ctl00_body">
-        <div id="wrapper1" class=" MainContainer">
+    <body>
+        <div class="MainContainer">
             <!--Content Starts-->
-            <div class="MB mContent clearfix">
-                <div id="contentDiv">
-                    <div id="search-box">
-                        <input id="search-text" placeholder="Search your video" type="text"/>
-                        <input id="search-button" type="submit" value="Search" onclick="search()">
-                    </div>
-                    <div class='loader'>
-                        <img src="/images/loader.gif">
-                        <div>Wait for a moment</div>
-                    </div>
-                    <div class="vid-container">
-                        <iframe id="vid-player" src=""></iframe>
-                        <div class="details">
-                            <div class="title"></div>
-                            <div class="publishedAt"></div>
-                            <div class="description"></div>
-                            <div class="download-box">
-                            </div>
+            <div id="contentDiv">
+                <div id="search-box">
+                    <input id="search-text" placeholder="Search your video" type="text"/>
+                    <input id="search-button" type="submit" value="Search" onclick="search()">
+                </div>
+                <div class='loader'>
+                    <img src="/images/loader.gif">
+                    <div>Wait for a moment</div>
+                </div>
+                <div class="vid-container">
+                    <iframe id="vid-player" src=""></iframe>
+                    <div class="details">
+                        <div class="title"></div>
+                        <div class="publishedAt"></div>
+                        <div class="description"></div>
+                        <div class="download-box">
                         </div>
                     </div>
-                    <div id="search-container">
-                    </div>
                 </div>
-                <div class="gototop">TOP</div>
+                <div id="search-container">
+                </div>
             </div>
-            <!--Content Ends-->
+            <div class="gototop">TOP</div>
         </div>
-        <% include scriptholder %>
-        <!-- <script src="js/auth.js"></script> -->
-        <script src="js/search.js"></script>
-        <!-- <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script> -->
+        <!--Content Ends-->
+        <script src="js/index.min.js"></script>
     </body>
 </html>

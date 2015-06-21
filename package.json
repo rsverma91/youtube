@@ -13,6 +13,8 @@
     "express": "~4.12.2",
     "fs": "0.0.2",
     "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-develop": "^0.4.0",
     "load-grunt-tasks": "^3.2.0",

@@ -76,6 +76,10 @@ a:focus {
     outline: thin dotted #333;
     outline-offset: 1px;
 }
+.MainContainer{
+    max-width: 960px;
+    margin: 0 auto;
+}
 a:hover, a:active {
     outline: 0;
     text-decoration: none;

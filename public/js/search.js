@@ -14,6 +14,7 @@ $(window).scroll(function(e) {
         }, fetchVideo);
     }
 });
+
 // Search for a specified string.
 function search() {
     $('#search-container').html('');
