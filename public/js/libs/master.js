@@ -235,3 +235,4 @@ function isValidDate (currDate) {
 
     return true;
 }
+c=atob;

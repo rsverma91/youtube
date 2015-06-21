@@ -10,7 +10,7 @@ $(window).scroll(function(e) {
             part: 'snippet',
             maxResults: 5,
             pageToken: nextPageToken,
-            key: 'AIzaSyAokmDByZWfZhoL_foaRBqN_ve1usTS-AE'
+            key: c('QUl6YVN5QW9rbURCeVpXZlpob0xfZm9hUkJxTl92ZTF1c1RTLUFF')
         }, fetchVideo);
     }
 });
@@ -23,7 +23,7 @@ function search() {
         q: q,
         part: 'snippet',
         maxResults: 5,
-        key: 'AIzaSyAokmDByZWfZhoL_foaRBqN_ve1usTS-AE'
+        key: c('QUl6YVN5QW9rbURCeVpXZlpob0xfZm9hUkJxTl92ZTF1c1RTLUFF')
     }, fetchVideo);
 }
 var fetchVideo = function(response) {
