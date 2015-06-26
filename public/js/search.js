@@ -2,7 +2,7 @@ var nextPageToken = "";
 var flag = 0;
 $(window).scroll(function(e) {
     e.preventDefault();
-    if (($('body').height() - $('body').scrollTop() <= '611') && flag == 1) {
+    if (($('body').height() - $('body').scrollTop() <= '633') && flag == 1) {
         flag = 0;
         var q = $('#search-text').val();
         var request = $.get('https://www.googleapis.com/youtube/v3/search', {

@@ -31,6 +31,10 @@
             <div class="gototop">TOP</div>
         </div>
         <!--Content Ends-->
+        <% if(hostname === "rsverma91.herokuapp.com") {%>
         <script src="js/index.min.js"></script>
+        <% } else {%>
+        <% include scriptholder %>
+        <% } %>
     </body>
 </html>
