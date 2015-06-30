@@ -15,8 +15,13 @@ $(window).scroll(function(e) {
     }
 });
 
+$('#search-box').on('submit',function(e) {
+    search(e);
+});
+
 // Search for a specified string.
-function search() {
+var search = function(e) {
+    e.preventDefault();
     $('#search-container').html('');
     var q = $('#search-text').val();
     var request = $.get('https://www.googleapis.com/youtube/v3/search', {
@@ -25,7 +30,8 @@ function search() {
         maxResults: 5,
         key: c('QUl6YVN5QW9rbURCeVpXZlpob0xfZm9hUkJxTl92ZTF1c1RTLUFF')
     }, fetchVideo);
-}
+};
+
 var fetchVideo = function(response) {
     $('.vid-container').hide();
     var resultItems = response.items;
